@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* cambiar el tamaño de la caja para que el padding y el borde no afecten el tamaño del elemento */
+  list-style: none; /* elimina los puntos de las listas */
+  text-decoration: none; /* elimina la decoracion de los enlaces */
+  font-family: "Poppins", sans-serif; /* establece la fuente de la pagina */
+  scroll-behavior: smooth; /* establece que el scroll sea suave */
+}
+
+body {
+  background: linear-gradient(#2b1055, #7597de);
+  min-height: 100vh; /* tomata el 100% del alto de la pantalla */
+  overflow-x: hidden; /* oculta el contenido que se salga del body al hacer scroll en x */
+}
+
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between; /* distribuye el espacio entre los elementos */
+  align-items: center; /* alinea los elementos verticalmente */
+  top: 0;
+  left: 0;
+  width: 100%; /* ocupa el 100% del ancho del contenedor padre */  
+  padding: 30px 100px; /* agrega un padding de 30px en la parte superior e inferior y 100px en los lados */
+  z-index: 1000; /* establece el orden de apilamiento de un elemento */
+}
+
+header .logo {
+  color: #fff;
+  font-size: 2em; /* esto permite que el tamaño de la fuente sea 2 veces el tamaño de la fuente por defecto */
+  text-transform: uppercase; /* convierte el texto en mayusculas */
+  font-weight: 700; /* establece el grosor de la fuente */ 
+  margin-right: auto; /* se permite que el elemento se mueva hacia la izquierda */
+}
+
+header nav {
+  display: flex; /* establece que el elemento se muestre como un flexbox */
+  align-items: center; /* alinea los elementos verticalmente */
+}
+
+header ul{
+  display: flex; /* establece que el elemento se muestre como un flexbox */
+  align-items: center; /* alinea los elementos verticalmente */
+  justify-content: center; /* distribuye el espacio entre los elementos horizontalmente */
+}
+
+header ul li {
+  margin-left: 20px; /* establece un margen a la izquierda de 20px */
+}
+
+header ul li a {
+  color: #fff; /* establece el color del texto */
+  padding: 6px 15px; /* agrega un padding de 6px en la parte superior e inferior y 15px en los lados */
+  border-radius: 20px; /* establece el radio de las esquinas del elemento */
+  font-size: medium; /* establece el tamaño de la fuente en medio */
+  font-weight: 700; /* establece el grosor de la fuente */
+}
+
+header ul li a:hover,
+.active {
+  background: #fff;
+  color: #2b1055;
+  transition: background 0.5s ease-in-out; /* establece la duracion de la transicion */
+
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden; /* oculta el contenido que se salga del section */
+}
+
+section::before {
+  content: ''; /* establece el contenido del elemento */
+  position: absolute; /* establece la posicion del elemento */
+  bottom: 0; /* establece la distancia entre el elemento y la parte inferior del contenedor padre */
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent); /* establece un degradado de color */
+  z-index: 1000; /* establece el orden de apilamiento de un elemento */
+}
+
+section img {
+  position: absolute; /* establece la posicion del elemento relativa al contenedor padre */
+  top: 0; /* establece la distancia entre el elemento y la parte superior del contenedor padre */
+  left: 0; /* establece la distancia entre el elemento y la parte izquierda del contenedor padre */
+  width: 100%; /* ocupa el 100% del ancho del contenedor padre */
+  height: 100%; /* ocupa el 100% del alto del contenedor padre */
+  object-fit: cover; /* ajusta la imagen al tamaño del contenedor */
+  pointer-events: none; /* establece que el elemento no sea clickeable */
+}
+
+section img#moon {
+  mix-blend-mode: screen; /*establece que el contenido de la imagen se mezcle con el fondo */
+}
+
+section img#mountains_front {
+  z-index: 10; /* establece el orden de apilamiento de un elemento */
+}
+
+#text {
+  position: absolute; /* establece la posicion del elemento */
+  right: -350px;
+  color: #fff;
+  white-space: nowrap; /* establece que el texto no se puede dividir en varias lineas */
+  font-size: 7.5vw; /* establece el tamaño de la fuente en 7.5 veces el tamaño de la ventana */
+  z-index: 9; /* establece el orden de apilamiento de un elemento */
+}
+
+#btn {
+  text-decoration: none; /* elimina la decoracion de los enlaces */
+  display: inline-block; /* establece que el elemento se muestre como un bloque, pero sin saltos de linea */
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
+
+  transform: translateY(100px); /* establece el desplazamiento vertical del elemento */
+}
+
+.sec {
+  position: relative;
+  padding: 100px;
+  background: #1c0522;
+}
+
+.sec h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.sec p {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #fff;
+}

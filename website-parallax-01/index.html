@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <title>Document</title>
+  
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Logo
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <!-- Usamos font-awesome para obtener el icono -->
+        </nav>
+    </header>
+
+    <section>
+      <img src="stars.png" alt="stars" id="stars">
+      <img src="moon.png" alt="moon" id="moon">
+      <img src="mountains_behind.png" alt="mountains_behind" id="mountains_behind">
+      <h2 id="text">Brillo Lunar</h2>
+      <!-- ir a #sec-->
+      <a href="#sec" id="btn">Explorar</a>
+      <img src="mountains_front.png" alt="mountains_front" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+      <h2>Efecto de Scroll Parallax</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in quibusdam iusto. Omnis, ullam alias voluptatem asperiores, voluptatum odio, odit magnam necessitatibus rerum nulla dolores temporibus in accusamus a sequi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab totam optio hic culpa aut pariatur architecto atque minima ea porro ut eos laudantium incidunt, quas maxime eius facilis perferendis beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit. In animi neque voluptas nemo, numquam explicabo ducimus est veritatis dolores itaque soluta, voluptate sequi porro aut mollitia officiis debitis error corporis.
+
+      <br><br>
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam inventore commodi alias tempore perspiciatis. Provident, ipsam odit blanditiis, corrupti neque quos illo numquam necessitatibus in nostrum consectetur, quod porro debitis.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis consequuntur odio excepturi tenetur ea. Delectus doloremque, tenetur quidem rerum a illum asperiores nulla inventore, illo eligendi earum blanditiis. Repellendus, cumque.
+
+      <br><br>
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam inventore commodi alias tempore perspiciatis. Provident, ipsam odit blanditiis, corrupti neque quos illo numquam necessitatibus in nostrum consectetur, quod porro debitis.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis consequuntur odio excepturi tenetur ea. Delectus doloremque, tenetur quidem rerum a illum asperiores nulla inventore, illo eligendi earum blanditiis. Repellendus, cumque.
+
+      <br><br>
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam inventore commodi alias tempore perspiciatis. Provident, ipsam odit blanditiis, corrupti neque quos illo numquam necessitatibus in nostrum consectetur, quod porro debitis.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis consequuntur odio excepturi tenetur ea. Delectus doloremque, tenetur quidem rerum a illum asperiores nulla inventore, illo eligendi earum blanditiis. Repellendus, cumque.
+
+      <br><br>
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam inventore commodi alias tempore perspiciatis. Provident, ipsam odit blanditiis, corrupti neque quos illo numquam necessitatibus in nostrum consectetur, quod porro debitis.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis consequuntur odio excepturi tenetur ea. Delectus doloremque, tenetur quidem rerum a illum asperiores nulla inventore, illo eligendi earum blanditiis. Repellendus, cumque.
+      </p>
+    </div>
+
+    <script>
+      let stars = document.getElementById('stars');
+      let moon = document.getElementById('moon');
+      let mountains_behind = document.getElementById('mountains_behind');
+      let text = document.getElementById('text');
+      let btn = document.getElementById('btn');
+      let mountains_front = document.getElementById('mountains_front');
+
+      let header = document.querySelector('header');
+
+      window.addEventListener('scroll', function() {
+        let value = window.scrollY;
+        // mover las estrellas a la derecha
+        stars.style.left = value*.25 + 'px';
+        moon.style.top = value*1.07 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+
+        header.style.top = value * 0.5 + 'px';
+
+      })
+    </script>
+</body>
+</html>
